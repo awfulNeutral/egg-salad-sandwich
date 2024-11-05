@@ -2,8 +2,11 @@
 
 ## What idea(s) do you have for your final project?
 
-A short choose your own adventure game made in RenPy or
+A short choose your own adventure game made in RenPy
+
 a Hitman Go clone made in Pygame
+
+a "survivors" style game in Pygame
 
 ## If you plan to collaborate with one or two classmates, what are their names?
 
