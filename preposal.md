@@ -10,7 +10,7 @@ a "survivors" style game in Pygame
 
 A program to save and sort recipes for miniature painting
 
-Roster builder for Kill Team 3e
+Roster builder for Kill Team 3e, html or pygame for images
 
 ## If you plan to collaborate with one or two classmates, what are their names?
 
