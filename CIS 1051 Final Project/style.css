@@ -1,0 +1,65 @@
+body{
+    background-image: url(Images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: hsl(0, 0%, 25%);
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+.dropdown{
+    display: inline-block;
+}
+.dropdown button{
+    background-color: grey;
+    color: orange;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: beige;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: lightgrey;
+}
+.dropdown a:hover{
+    background-color: lightgray;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+#operative{
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+a:link {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+}
+a:visited {
+    color: brown;
+}
+a:hover {
+    color: gold;
+}
+a:active {
+    color: yellow;
+}
+  
