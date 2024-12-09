@@ -102,16 +102,56 @@ switch(opType){
 
 }*/
 
+const opValues = [0,1,2,3,4,5,6,7,8];
+const opNames = {
+    "0":spaceMarineCaptain,
+    "1":assaultIntercessorSergeant,
+    "2":intercessorSergeant,
+    "3":assaultIntercessorGrenadier,
+    "4":assaultIntercessorWarrior,
+    "5":eliminatorSniper,
+    "6":heavyIntercessorGunner,
+    "7":intercessorGunner,
+    "8":intercessorWarrior
+};
 
-const spaceMarineCaptain = document.getElementsById(spaceMarineCaptain);
+function toggleOperative(value){
+    var opForms = document.getElementById("forms").getElementsByTagName("form")
+    for (var i = 0; i < opForms.length; i++){
+        opForms[i].style.display = "none";
+    }
+    opNames[value].style.display = "block";
+}
 
-
-function toggleOperative(){
-    let value = document.getElementById("opSelector").value
-
+    /*const content = document.getElementsByClassName("content");
+    content.style.display = "none";
     switch(value){
-        case 0:
+        case "0":
+            spaceMarineCaptain.style.display = "block";
+            assaultIntercessorSergeant.style.display = "none";
+            break;
+        case "1":
+            assaultIntercessorSergeant.style.display = "block";
             spaceMarineCaptain.style.display = "block";
             break;
-    }
-}
+        case "2":
+            intercessorSergeant.style.display = "block";
+            break;
+        case "3":
+            assaultIntercessorGrenadier.style.display = "block";
+            break;
+        case "4":
+            intercessorWarrior.style.display = "block";
+            break;*/
+    /*const spaceMarineCaptain = document.getElementsById("spaceMarineCaptain");
+    const assaultIntercessorSergeant = document.getElementsById("assaultIntercessorSergeant");
+    const intercessorSergeant = document.getElementsById("intercessorSergeant");
+    const assaultIntercessorGrenadier = document.getElementsById("assaultIntercessorGrenadier");
+    const intercessorWarrior = document.getElementsById("intercessorWarrior");
+
+    spaceMarineCaptain.style.display = value == "0" ? "block" : "none"
+    assaultIntercessorSergeant.style.display = value == 1 ? "block" : "none"
+    intercessorSergeant.style.display = value == "2" ? "block" : "none"
+    assaultIntercessorGrenadier.style.display = value == "3" ? "block" : "none"
+    intercessorWarrior.style.display = value == "4" ? "block" : "none"*/
+

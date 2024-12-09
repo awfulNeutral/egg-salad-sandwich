@@ -16,6 +16,55 @@ h2{
 h3{
     color: orange;
 }
+form{
+    display: inline-block;
+    color: orange;
+    background-color: hsl(0, 0%, 15%);
+    width: 400px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    margin: 5px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+#opIcon{
+    float: right;
+    margin: 10px;
+}
+#textBox{
+    background-color: lightgray;
+    width: 300px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 2px;
+}
+label{
+    color: orange;
+    font-size: 1em;
+    font-weight: bold;
+}
+button{
+    color: black;
+    background-color: orange;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: gold;
+}
+select{
+    background-color: lightgray;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 2px;
+}
+.data{
+    display: none;
+}
 .dropdown{
     display: inline-block;
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Testing</title>
+    <link rel="stylesheet" href="styleTesting.css">
+</head>
+<body>
+    <!--<h1 id="myH1">Welcome</h1>
+
+    <label>username: </Label>
+    <input id="myText"><br><br>
+    <button id="mySubmit">Submit</button><br><br>
+    
+    <label id="countLabel">0</label>
+    <div id="btnContainer">    
+        <button id="decreaseBtn" class="buttons">Descrease</button>
+        <button id="resetBtn" class="buttons">Reset</button>
+        <button id="increaseBtn" class="buttons">Increase</button>
+    </div><br><br>
+
+    <input type="radio" id="abrBtn" name="weapons">
+    <label for="abrBtn">Auto bolt rifle; fists</label>
+    <br>
+    <input type="radio" id="brBtn" name="weapons">
+    <label for="brBtn">Bolt rifle; fists</label>
+    <br>
+    <input type="radio" id="sbrBtn" name="weapons">
+    <label for="sbrBtn">Stalker bolt rifle; fists</label>
+    <br><br>
+    <button type="submit" id="addToRoster">Add to Roster</button>
+    <p id="rosterResult"></p>-->
+    <label>Choose an Operative</label><br>
+    <div>
+        <select name="opSelector" id="opSelector" onchange="toggleOperative(this.value)">
+            <option value="" disabled selected hidden></option>
+            <option disabled>Leaders</option>
+            <option value="0" style="font-weight: bold;">Space Marine Captain</option>
+            <option value="1" style="font-weight: bold;">Assault Intercessor Sergeant</option>
+            <option value="2" style="font-weight: bold;">Intercessor Sergeant</option>
+            <option disabled>Other Operatives</option>
+            <option value="3" style="font-weight: bold;">Assault Intercessor Grenadier</option>
+            <option value="4" style="font-weight: bold;">Assault Intercessor Warrior</option>
+            <option value="5" style="font-weight: bold;">Eliminator Sniper</option>
+            <option value="6" style="font-weight: bold;">Heavy Intercessor Gunner</option>
+            <option value="7" style="font-weight: bold;">Intercessor Gunner</option>
+            <option value="8" style="font-weight: bold;">Intercessor Warrior</option>
+        </select>
+    </div>
+    <div class="content" id="forms">
+        <form class="data" id="spaceMarineCaptain">
+            <img src="Images/Space Marine Captain Icon.png" height="75px" id="opIcon">
+            <h3>Space Marine Captain</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Space Marine Captain"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="plasmaPistolPowerfist">Plasma pistol; powerfist</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorSergeant">
+            <img src="Images/Assault Intercessor Sergeant Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Sergeant</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Sergeant"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="handFlamerChainsword">Hand flamer; chainsword</option>
+                <option value="handFlamerPowerfist">Hand flamer; powerfist</option>
+                <option value="handFlamerPowerWeapon">Hand flamer; power weapon</option>
+                <option value="handFlamerThunderHammer">Hand flamer; thunder hammer</option>
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+                <option value="heavyBoltPistolPowerfist">Heavy bolt pistol; powerfist</option>
+                <option value="heavyBoltPistolPowerWeapon">Heavy bolt pistol; power weapon</option>
+                <option value="heavyBoltPistolThunderHammer">Heavy bolt pistol; thunder hammer</option>
+                <option value="plasmaPistolChainsword">Plasma pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="intercessorSergeant">
+            <img src="Images/Intercessor Sergeant Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Sergeant</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Sergeant"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleChainsword">Auto bolt rifle; chainsword</option>
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="autoBoltRiflePowerfist">Auto bolt rifle; powerfist</option>
+                <option value="autoBoltRiflePowerWeapon">Auto bolt rifle; power weapon</option>
+                <option value="autoBoltRifleThunderHammer">Auto bolt rifle; thunder hammer</option>
+                <option value="boltRifleChainsword">Bolt rifle; chainsword</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="boltRiflePowerfist">Bolt rifle; powerfist</option>
+                <option value="boltRiflePowerWeapon">Bolt rifle; power weapon</option>
+                <option value="boltRifleThunderHammer">Bolt rifle; thunder hammer</option>
+                <option value="stalkerBoltRifleChainsword">Stalker bolt rifle; chainsword</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+                <option value="stalkerBoltRiflePowerfist">Stalker bolt rifle; powerfist</option>
+                <option value="stalkerBoltRiflePowerWeapon">Stalker bolt rifle; power weapon</option>
+                <option value="stalkerBoltRifleThunderHammer">Stalker bolt rifle; thunder hammer</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorGrenadier">
+            <img src="Images/Assault Intercessor Grenadier Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Grenadier</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Grenadier"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorWarrior">
+            <img src="Images/Assault Intercessor Warrior Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Warrior</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Warrior"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="eliminatorSniper">
+            <img src="Images/Eliminator Sniper Icon.png" height="75px" id="opIcon">
+            <h3>Eliminator Sniper</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Eliminator Sniper"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="boltPistolBoltSniperRifleFists">Bolt pistol, bolt sniper rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="heavyIntercessorGunner">
+            <img src="Images/Heavy Intercessor Gunner Icon.png" height="75px" id="opIcon">
+            <h3>Heavy Intercessor Gunner</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Heavy Intercessor Gunner"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBolterFists">Heavy bolter; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="intercessorGunner">
+            <img src="Images/Intercessor Gunner Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Gunner</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Gunner"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>    
+        <form  class="data" id="intercessorWarrior">
+            <img src="Images/Intercessor Warrior Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Warrior</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Warrior"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+    </div>
+    
+    
+
+    <script src="javaTestingIndex.js"></script>
+</body>
+</html>

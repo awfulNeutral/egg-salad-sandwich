@@ -2,7 +2,7 @@
 
 #### Your name
 
-Joe Tither
+Joseph Tither
 
 #### Your section leader's name
 

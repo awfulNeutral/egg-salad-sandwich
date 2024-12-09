@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Images/KTLogo.png">
+    <title>KT3e Roster Builder - Angels of Death</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Angels of Death</h1>
+        <a href="index.html">Home</a>
+        <a href="https://www.warhammer-community.com/en-us/downloads/kill-team/" target=_blank title="Downloads page on the Warhammer Community Kill Team website">All Downloads</a>
+        <a href="https://assets.warhammer-community.com/killteam_keydownloads_literules_eng-jfhe9v0j7c-n0x6ozmgo9.pdf" target=_blank title="Link to Kill Team Lite Rules PDF">Kill Team Lite Rules</a>
+        <a href="https://assets.warhammer-community.com/kt_universal_equipment_online_rules_eng_20-hufnt2qija-odnbnw5x3t.pdf" target=_blank title="Link to the Rules PDF for Universal Equipment">Universal Equipment Rules</a>       
+        <hr>
+    </header>
+    <main>
+        <br>
+        <a href="https://warcomprod2024productionstorage.s3.eu-west-2.amazonaws.com/rules-downloads/kill-team/team-rules/angels-of-death/killteam_teamrules_angelsofdeath_eng_02.10.24.pdf" target=_blank title="Link to Rules PDF for the Angels of Death Kill Team">Angels of Death Rules PDF</a><br><br>
+        <label>Choose an Operative</label><br>
+    <div>
+        <select name="opSelector" id="opSelector" onchange="toggleOperative(this.value)">
+            <option value="" disabled selected hidden></option>
+            <option disabled>Leaders</option>
+            <option value="0" style="font-weight: bold;">Space Marine Captain</option>
+            <option value="1" style="font-weight: bold;">Assault Intercessor Sergeant</option>
+            <option value="2" style="font-weight: bold;">Intercessor Sergeant</option>
+            <option disabled>Other Operatives</option>
+            <option value="3" style="font-weight: bold;">Assault Intercessor Grenadier</option>
+            <option value="4" style="font-weight: bold;">Assault Intercessor Warrior</option>
+            <option value="5" style="font-weight: bold;">Eliminator Sniper</option>
+            <option value="6" style="font-weight: bold;">Heavy Intercessor Gunner</option>
+            <option value="7" style="font-weight: bold;">Intercessor Gunner</option>
+            <option value="8" style="font-weight: bold;">Intercessor Warrior</option>
+        </select>
+    </div>
+    <div class="content" id="forms">
+        <form class="data" id="spaceMarineCaptain">
+            <img src="Images/Space Marine Captain Icon.png" height="75px" id="opIcon">
+            <h3>Space Marine Captain</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Space Marine Captain"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="plasmaPistolPowerfist">Plasma pistol; powerfist</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorSergeant">
+            <img src="Images/Assault Intercessor Sergeant Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Sergeant</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Sergeant"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="handFlamerChainsword">Hand flamer; chainsword</option>
+                <option value="handFlamerPowerfist">Hand flamer; powerfist</option>
+                <option value="handFlamerPowerWeapon">Hand flamer; power weapon</option>
+                <option value="handFlamerThunderHammer">Hand flamer; thunder hammer</option>
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+                <option value="heavyBoltPistolPowerfist">Heavy bolt pistol; powerfist</option>
+                <option value="heavyBoltPistolPowerWeapon">Heavy bolt pistol; power weapon</option>
+                <option value="heavyBoltPistolThunderHammer">Heavy bolt pistol; thunder hammer</option>
+                <option value="plasmaPistolChainsword">Plasma pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="intercessorSergeant">
+            <img src="Images/Intercessor Sergeant Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Sergeant</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Sergeant"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleChainsword">Auto bolt rifle; chainsword</option>
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="autoBoltRiflePowerfist">Auto bolt rifle; powerfist</option>
+                <option value="autoBoltRiflePowerWeapon">Auto bolt rifle; power weapon</option>
+                <option value="autoBoltRifleThunderHammer">Auto bolt rifle; thunder hammer</option>
+                <option value="boltRifleChainsword">Bolt rifle; chainsword</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="boltRiflePowerfist">Bolt rifle; powerfist</option>
+                <option value="boltRiflePowerWeapon">Bolt rifle; power weapon</option>
+                <option value="boltRifleThunderHammer">Bolt rifle; thunder hammer</option>
+                <option value="stalkerBoltRifleChainsword">Stalker bolt rifle; chainsword</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+                <option value="stalkerBoltRiflePowerfist">Stalker bolt rifle; powerfist</option>
+                <option value="stalkerBoltRiflePowerWeapon">Stalker bolt rifle; power weapon</option>
+                <option value="stalkerBoltRifleThunderHammer">Stalker bolt rifle; thunder hammer</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorGrenadier">
+            <img src="Images/Assault Intercessor Grenadier Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Grenadier</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Grenadier"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form class="data" id="assaultIntercessorWarrior">
+            <img src="Images/Assault Intercessor Warrior Icon.png" height="75px" id="opIcon">
+            <h3>Assault Intercessor Warrior</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Assault Intercessor Warrior"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBoltPistolChainsword">Heavy bolt pistol; chainsword</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="eliminatorSniper">
+            <img src="Images/Eliminator Sniper Icon.png" height="75px" id="opIcon">
+            <h3>Eliminator Sniper</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Eliminator Sniper"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="boltPistolBoltSniperRifleFists">Bolt pistol, bolt sniper rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="heavyIntercessorGunner">
+            <img src="Images/Heavy Intercessor Gunner Icon.png" height="75px" id="opIcon">
+            <h3>Heavy Intercessor Gunner</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Heavy Intercessor Gunner"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="heavyBolterFists">Heavy bolter; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <form  class="data" id="intercessorGunner">
+            <img src="Images/Intercessor Gunner Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Gunner</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Gunner"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>    
+        <form  class="data" id="intercessorWarrior">
+            <img src="Images/Intercessor Warrior Icon.png" height="75px" id="opIcon">
+            <h3>Intercessor Warrior</h3><br>
+            <label for="opName" id="opName">Operative Name (optional)</label><br>
+            <input type="text" id="textBox" placeholder="Intercessor Warrior"><br>
+            <label for="weapons" id="weapons">Weapons</label><br>
+            <select name="weapons">
+                <option value="autoBoltRifleFists">Auto bolt rifle; fists</option>
+                <option value="boltRifleFists">Bolt rifle; fists</option>
+                <option value="stalkerBoltRifleFists">Stalker bolt rifle; fists</option>
+            </select><br>
+            <button type="button" onclick="addToRoster()">Add to Roster</button>
+        </form>
+        <br>
+    </div>
+        <hr>
+        <h3>Angels of Death Image Gallery</h3>
+        <div class="gallery">
+            <a target="_blank" href="Images/Intercessor Sergeant.png">
+                <img src="Images/Intercessor Sergeant.png"
+                    alt="Intercessor Sergeant"
+                    title="Intercessor Sergeant">
+            </a>
+            <div class="description">Intercessor Sergeant</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Assault Intercessor Sergeant.png">
+                <img src="Images/Assault Intercessor Sergeant.png"
+                    alt="Assault Intercessor Sergeant"
+                    title="Assault Intercessor Sergeant">
+            </a>
+            <div class="description">Assault Intercessor Sergeant</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Space Marine Captain.png">
+                <img src="Images/Space Marine Captain.png"
+                    alt="Space Marine Captain"
+                    title="Space Marine Captain">
+            </a>
+            <div class="description">Space Marine Captain</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Assault Intercessor Grenadier.png">
+                <img src="Images/Assault Intercessor Grenadier.png"
+                    alt="Assault Intercessor Grenadier"
+                    title="Assault Intercessor Grenadier">
+            </a>
+            <div class="description">Assault Intercessor Grenadier</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Assault Intercessor Warrior.png">
+                <img src="Images/Assault Intercessor Warrior.png"
+                    alt="Assault Intercessor Warrior"
+                    title="Assault Intercessor Warrior">
+            </a>
+            <div class="description">Assault Intercessor Warrior</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Eliminator Sniper.png">
+                <img src="Images/Eliminator Sniper.png"
+                    alt="Eliminator Sniper"
+                    title="Eliminator Sniper">
+            </a>
+            <div class="description">Eliminator Sniper</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Heavy Intercessor Gunner.png">
+                <img src="Images/Heavy Intercessor Gunner.png"
+                    alt="Heavy Intercessor Gunner"
+                    title="Heavy Intercessor Gunner">
+            </a>
+            <div class="description">Heavy Intercessor Gunner</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Intercessor Gunner.png">
+                <img src="Images/Intercessor Gunner.png"
+                    alt="Intercessor Gunner"
+                    title="Intercessor Gunner">
+            </a>
+            <div class="description">Intercessor Gunner</div>
+        </div>
+        <div class="gallery">
+            <a target="_blank" href="Images/Intercessor Warrior.png">
+                <img src="Images/Intercessor Warrior.png"
+                    alt="Intercessor Warrior"
+                    title="Intercessor Warrior">
+            </a>
+            <div class="description">Intercessor Warrior</div>
+        </div>              
+    </main>
+    <footer>
+        <hr>
+        <p>Images by Games Workshop</p>
+    </footer>
+    <script src="angelsOfDeath.js"></script>
+</body>
+</html>
