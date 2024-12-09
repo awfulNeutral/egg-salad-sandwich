@@ -1,0 +1,101 @@
+body{
+    background-image: url(Images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: hsl(0, 0%, 15%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+form{
+    display: inline-block;
+    color: orange;
+    background-color: hsl(0, 0%, 15%);
+    width: 400px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+    margin: 5px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+}
+#opIcon{
+    float: right;
+    margin: 10px;
+}
+#textBox{
+    background-color: lightgray;
+    width: 300px;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 2px;
+}
+label{
+    color: orange;
+    font-size: 1em;
+    font-weight: bold;
+}
+button{
+    color: black;
+    background-color: orange;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: gold;
+}
+select{
+    background-color: lightgray;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 2px;
+}
+
+#spaceMarineCaptain{
+    display: none;
+}
+#assaultIntercessorSergeant{
+    display: none;
+}
+#intercessorSergeant{
+    display: none;
+}
+#assaultIntercessorGrenadier{
+    display: none;
+}
+#intercessorWarrior{
+    display: none;
+}
+
+
+
+
+
+
+#countLabel{
+    display: block;
+    text-align: center;
+    font-size: 3em;
+}
+#btnContainer{
+    text-align: center;
+}
+.buttons{
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: rgb(122, 122, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.buttons:hover{
+    background-color: blue;
+}
+/*#addToRoster{
+    font-size: 1em;
+}*/
